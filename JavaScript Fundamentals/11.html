@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Логические операторы</title>
+</head>
+
+<body>
+  <h1>Логические операторы</h1>
+  <h2>Задачи</h2>
+
+  <h3>Проверка логина</h3>
+  <p>важность: 3</p>
+
+<script> 
+    //Проверка логина
+  let role = prompt('Введите логин'); 
+
+  if (role == 'Админ') {
+
+    let pass = prompt('Введите пароль');
+
+    if (pass == 'Я Главный') {
+      alert('Здравствуйте!');
+    } else if (pass === '' || pass === null) {
+      alert('Отменено');
+    } else {
+      alert('Неверный пароль');
+    }
+
+  } else if (role == '' || role == null) {
+    alert('Отменено');
+  } else {
+    alert('Я вас не знаю');
+  }
+</script>
+</body>
+
+</html>
