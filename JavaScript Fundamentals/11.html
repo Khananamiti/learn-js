@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Операторы сравнения</title>
+</head>
+
+<body>
+  <!-- #1 -->
+  <h1>Операторы сравнения</h1>
+  <h2>Задачи</h2>
+  <h3>if (строка с нулём)</h3>
+  <span>важность: 5</span>
+  <p>Выведется ли alert?</p>
+  <p>
+    if ("0") {
+    alert( 'Привет' );
+    }   
+  </p>
+  <button id="myButton1">Задание 1</button>
+  
+  <!-- #2 -->
+  <h3>Название JavaScript</h3>
+  <p>важность: 2</p>
+  <p>Используя конструкцию if..else, напишите код, который будет спрашивать: „Какое «официальное» название JavaScript?“</p>
+  <p>Если пользователь вводит «ECMAScript», то показать: «Верно!», в противном случае – отобразить: «Не знаете? ECMAScript!»</p>
+  <button id="myButton2">Задание 2</button>
+
+
+  <!-- #3 -->
+  <h3>Покажите знак числа</h3>
+  <span>важность: 2  </span>
+  <p>Используя конструкцию if..else, напишите код, который получает число через prompt, а затем выводит в alert:</p>
+  <p>
+    1, если значение больше нуля,
+    -1, если значение меньше нуля,
+    0, если значение равно нулю.
+  </p>
+  <p>Предполагается, что пользователь вводит только числа.</p>
+  <button id="myButton3">Задание 3</button>
+
+
+  <!-- #4 -->
+  <h3>Перепишите 'if' в '?'</h3>
+  важность: 5
+  Перепишите конструкцию if с использованием условного оператора '?':
+
+  <p>let result;
+
+  if (a + b < 4) { result='Мало' ; } else { result='Много' ; } решение  
+  </p>
+  <button id="myButton4">Задание 4</button>
+
+  <!-- #5 -->
+  <h3>Перепишите 'if..else' в '?'</h3>
+  <p>важность: 5</p>
+  <p>Перепишите if..else с использованием нескольких операторов '?' .</p> 
+  <p>Для читаемости рекомендуется разбить код на несколько строк.</p>
+  <p>let message; if (login=='Сотрудник' ) { message='Привет' ; } else if (login=='Директор' ) {  message='Здравствуйте' ; } else if (login=='' ) { message='Нет логина' ; } else { message='' ; }</p>
+  <button id="myButton5">Задание 5</button>
+  
+<script>  
+  //if (строка с нулём) #1
+  const callback1 = () => {
+      alert('Ответ: Да, выведется, потому что "0" - true');
+  };
+
+  const button1 = document.querySelector('#myButton1');
+  button1.addEventListener('click', callback1)
+
+  //Название JavaScript #2
+  const callback2 = () => {
+    let officialName = prompt('Какое "официальное" название JavaScript?', '');
+
+    if (officialName == 'ECMAScript') {
+      alert('Верно!');
+    } else {
+      alert('Не знаете? ECMAScript!');
+    }
+  };
+
+  const button2 = document.querySelector('#myButton2');
+  button2.addEventListener('click', callback2)
+
+  //Покажите знак числа #3
+  const callback3 = () => {
+    let number = prompt('Введите число');
+
+    if (number > 0) {
+      alert(1)
+    } else if (number == 0) {
+      alert(0)
+    } else {
+      alert(-1)
+    }
+  };
+
+  const button3 = document.querySelector('#myButton3');
+  button3.addEventListener('click', callback3)
+
+  //Перепишите 'if' в '?' #4
+  const callback4 = () => {
+    let a = prompt('Введите число a');
+    let b = prompt('Введите число b');
+    let result = (a + b < 4) ? alert('Мало') : alert('Много');      
+  };
+
+  const button4 = document.querySelector('#myButton4');
+  button4.addEventListener('click', callback4)
+
+  //Перепишите 'if..else' в '?' #5
+  const callback5 = () => {
+    let login = prompt('Вы авторизованы?');
+
+    let message = (login == 'Сотрудник') ? 'Привет' :
+                  (login == 'Директор') ? 'Здравствуйте' :
+                  (login == '') ? 'Нет логина' : 
+                  '' ;    
+    alert(message);
+  };
+
+  const button5 = document.querySelector('#myButton5');
+  button5.addEventListener('click', callback5)
+
+  let role = prompt('Введите логин'); 
+
+  if (role == 'Админ') {
+    let pass = prompt('Введите пароль');
+    if (pass == 'Я Главный') {
+      alert('Отменено');
+    } else {
+      alert('Отменено');
+    }
+  } else if (role == '' || role == null) {
+    alert('Отменено');
+  } else {
+    alert('Я вас не знаю');
+  }
+</script>
+</body>
+
+</html>
