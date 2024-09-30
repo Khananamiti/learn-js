@@ -8,28 +8,122 @@
 
 <body>
   
-  <h1>Конструкция "switch"</h1>
+  <h1>15 Функции</h1>
+  
+  <p>
+    <button onclick="document.location='14 the switch statement.html'">Предыдущая</button>
+    <button onclick="document.location='page/new.html'">Следующая</button>
+  </p>
+  
   <h2>Задачи</h2>
 
-
   <!-- #1 -->
-  <p>
-    Обязателен ли "else"?
-    важность: 4
-    Следующая функция возвращает true, если параметр age больше 18.
+  <div>
+    <h3>Обязателен ли "else"?</h3>
+    <p>важность: 4</p>
+    <p>Следующая функция возвращает true, если параметр age больше 18.</p>
+    <p>В ином случае она запрашивает подтверждение через confirm и возвращает его результат:</p>
+      <code>
+        <pre>
+          function checkAge(age) {
+            if (age > 18) {
+              return true;
+            } else {
+              // ...
+              return confirm('Родители разрешили?');
+            }
+          }
+        </pre>
+      </code>
+      <p>Будет ли эта функция работать как-то иначе, если убрать else?</p>
+      <code>
+        <pre>
+          function checkAge(age) {
+            if (age > 18) {
+              return true;
+            }
+            // ...
+            return confirm('Родители разрешили?');
+          }
+        </pre>
+      </code>
+      <p>Есть ли хоть одно отличие в поведении этого варианта?</p>
+    
+    <button id="myButton1">Задание 1</button>
+  </div>
+  
+  <!-- #2 -->
+  <div>       
+      <h3>Перепишите функцию, используя оператор '?' или '||'</h3>
+      <p>важность: 4 <br>
+      Следующая функция возвращает true, если параметр age больше 18. <br>    
+      В ином случае она задаёт вопрос confirm и возвращает его результат</p>
+    
+      <code>
+        <pre>
+          function checkAge(age) {
+            if (age > 18) {
+              return true;
+            } else {
+              return confirm('Родители разрешили?');
+            }
+          }
+        </pre>
+      </code>
+      Перепишите функцию, чтобы она делала то же самое, но без if, в одну строку.
+    
+      Сделайте два варианта функции checkAge:
+    
+      Используя оператор ?
+      Используя оператор ||
+    
+    <button id="myButton2">Задание 2</button>
+  </div>
 
-    В ином случае она запрашивает подтверждение через confirm и возвращает его результат:
+  <!-- #3 -->
+  <div>
+    <p>
+      Функция min(a, b)
+      важность: 1
+      Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
+      Пример вызовов:
+      <code>
+        <pre>
+          min(2, 5) == 2
+          min(3, -1) == -1
+          min(1, 1) == 1
+        </pre>
+      </code>
+    </p>
+    <button id="myButton3">Задание 3</button>
+  </div>
 
-    function checkAge(age) {
-      if (age > 18) {
-        return true;
-      } else {
-        // ...
-        return confirm('Родители разрешили?');
-      }
-    }
-    Будет ли эта функция работать как-то иначе, если убрать else?
-
+  <!-- #4 -->
+  <div>
+    <p>
+      <h3>Функция pow(x,n)</h3>
+      <p>важность: 4</p>
+      Напишите функцию pow(x,n), которая возводит x в степень n и возвращает результат.
+    
+      <code>
+        <pre>
+          pow(3, 2) = 3 * 3 = 9
+          pow(3, 3) = 3 * 3 * 3 = 27
+          pow(1, 100) = 1 * 1 * ...* 1 = 1
+        </pre>
+      </code>
+      Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
+    
+      Запустить демо
+    
+      P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше.
+    </p>
+    <button id="myButton4">Задание 4</button>
+  </div>
+  
+<script>  
+  //Обязателен ли "else"? #1
+  const callback1 = () => {
     function checkAge(age) {
       if (age > 18) {
         return true;
@@ -37,106 +131,13 @@
       // ...
       return confirm('Родители разрешили?');
     }
-    Есть ли хоть одно отличие в поведении этого варианта?
-  </p>
-  <button id="myButton1">Задание 1</button>
-
-  
-  <!-- #2 -->
-  <p>
-    Перепишите функцию, используя оператор '?' или '||'
-    важность: 4
-    Следующая функция возвращает true, если параметр age больше 18.
-    
-    В ином случае она задаёт вопрос confirm и возвращает его результат.
-    
-    function checkAge(age) {
-      if (age > 18) {
-        return true;
-      } else {
-        return confirm('Родители разрешили?');
-      }
-    }
-    Перепишите функцию, чтобы она делала то же самое, но без if, в одну строку.
-    
-    Сделайте два варианта функции checkAge:
-    
-    Используя оператор ?
-    Используя оператор ||
-  </p>
-
-  <button id="myButton2">Задание 2</button>
-
-
-  <!-- #3 -->
-  <p>
-    Функция min(a, b)
-    важность: 1
-    Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
-
-    Пример вызовов:
-
-    min(2, 5) == 2
-    min(3, -1) == -1
-    min(1, 1) == 1
-  </p>
-  <button id="myButton3">Задание 3</button>
-
-
-  <!-- #4 -->
-  <p>
-    <h3>Функция pow(x,n)</h3>
-    <p>важность: 4</p>
-    Напишите функцию pow(x,n), которая возводит x в степень n и возвращает результат.
-    
-    pow(3, 2) = 3 * 3 = 9
-    pow(3, 3) = 3 * 3 * 3 = 27
-    pow(1, 100) = 1 * 1 * ...* 1 = 1
-    Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
-    
-    Запустить демо
-    
-    P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше.
-  </p>
-  <button id="myButton4">Задание 4</button>
-    
-  
-<script>  
-  //if (строка с нулём) #1
-  const callback1 = () => {
-    let browser = 'Opera';
-
-    if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
-      alert( 'Okay we support these browsers too' );
-    } else if (browser === 'Edge'){
-      alert( "You've got the Edge!" );
-    } else {
-      alert( 'We hope that this page looks ok!' );
-    }
-
-
-    switch (browser) {
-      case 'Edge':
-        alert( "You've got the Edge!" );
-        break;
-
-      case 'Chrome':
-      case 'Firefox':
-      case 'Safari':
-      case 'Opera':
-        alert( 'Okay we support these browsers too' );
-        break;
-
-      default:
-        
-    }
   };
 
   const button1 = document.querySelector('#myButton1');
   button1.addEventListener('click', callback1);
 
 
-  //Название JavaScript #2
+  //Перепишите функцию, используя оператор '?' или '||' #2
   const callback2 = () => {
     const number = +prompt('Введите число между 0 и 3', '');
 
@@ -206,7 +207,7 @@
   };
 
   const button3 = document.querySelector('#myButton3');
-  button4.addEventListener('click', callback3);
+  button3.addEventListener('click', callback3);
 
 
   //if (строка с нулём) #4

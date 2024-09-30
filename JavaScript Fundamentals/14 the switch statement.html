@@ -1,134 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Конструкция "switch"</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Конструкция "switch"</title>
-</head>
+  <body>
+    <!-- #1 -->
+    <div>
+      <h1>14 Конструкция "switch"</h1>
+      <h2>Задачи</h2>
+      <h3>Напишите "if", аналогичный "switch"</h3>
+      <p>
+        важность: 5
+        <br />Напишите if..else, соответствующий следующему switch:
+      </p>
+      <code>
+        <pre>
+          switch (browser) {
+            case 'Edge':
+              alert( "You've got the Edge!" );
+              break;
+      
+            case 'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+              alert( 'Okay we support these browsers too' );
+              break;
+      
+            default:
+              alert( 'We hope that this page looks ok!' );
+          }
+        </pre>
+      </code>
+      <button id="myButton1">Задание 1</button>
+    </div>
 
-<body>
-  <!-- #1 -->
-  <h1>Конструкция "switch"</h1>
-  <h2>Задачи</h2>
-  <p>
-    Напишите "if", аналогичный "switch"
-важность: 5
-Напишите if..else, соответствующий следующему switch:
+    <!-- #2 -->
+    <div>      
+      <h3>Переписать условия "if" на "switch"</h3> 
+      <p>важность: 4 <br>Перепишите код с
+      использованием одной конструкции switch:</p> 
+      <code>
+        <pre>
+          const number = +prompt('Введите число между 0 и 3', '');
 
-switch (browser) {
-  case 'Edge':
-    alert( "You've got the Edge!" );
-    break;
+          if (number === 0) {
+            alert('Вы ввели число 0');
+          }
+          
+          if (number === 1) {
+            alert('Вы ввели число 1');
+          }
+          
+          if (number === 2 || number === 3) {
+            alert('Вы ввели число 2, а может и 3');
+          }
+        </pre>
+      </code>
+      
+      <button id="myButton2">Задание 2</button>
 
-  case 'Chrome':
-  case 'Firefox':
-  case 'Safari':
-  case 'Opera':
-    alert( 'Okay we support these browsers too' );
-    break;
+      <p>
+        <button onclick="document.location='13 loops - while and for.html'">Предыдущая</button>
+        <button onclick="document.location='15 functions.html'">Следующая</button>
+      </p>  
 
-  default:
-    alert( 'We hope that this page looks ok!' );
-}
-  </p>
-  <button id="myButton1">Задание 1</button>
-  
-  <!-- #2 -->
-  <p>
-    Переписать условия "if" на "switch"
-важность: 4
-Перепишите код с использованием одной конструкции switch:
+    </div>
 
-const number = +prompt('Введите число между 0 и 3', '');
+    <script>
+      //if (строка с нулём) #1
+      const callback1 = () => {
+        let browser = "Opera";
 
-if (number === 0) {
-  alert('Вы ввели число 0');
-}
+        if (
+          browser === "Chrome" ||
+          browser === "Firefox" ||
+          browser === "Safari" ||
+          browser === "Opera"
+        ) {
+          alert("Okay we support these browsers too");
+        } else if (browser === "Edge") {
+          alert("You've got the Edge!");
+        } else {
+          alert("We hope that this page looks ok!");
+        }
 
-if (number === 1) {
-  alert('Вы ввели число 1');
-}
+        switch (browser) {
+          case "Edge":
+            alert("You've got the Edge!");
+            break;
 
-if (number === 2 || number === 3) {
-  alert('Вы ввели число 2, а может и 3');
-}
-  </p>
+          case "Chrome":
+          case "Firefox":
+          case "Safari":
+          case "Opera":
+            alert("Okay we support these browsers too");
+            break;
 
-  <button id="myButton2">Задание 2</button>
-  
-<script>  
-  //if (строка с нулём) #1
-  const callback1 = () => {
-    let browser = 'Opera';
+          default:
+        }
+      };
 
-    if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
-      alert( 'Okay we support these browsers too' );
-    } else if (browser === 'Edge'){
-      alert( "You've got the Edge!" );
-    } else {
-      alert( 'We hope that this page looks ok!' );
-    }
+      const button1 = document.querySelector("#myButton1");
+      button1.addEventListener("click", callback1);
 
+      //Название JavaScript #2
+      const callback2 = () => {
+        const number = +prompt("Введите число между 0 и 3", "");
 
-    switch (browser) {
-      case 'Edge':
-        alert( "You've got the Edge!" );
-        break;
+        switch (number) {
+          case 0:
+            alert("Вы ввели число 0");
+            break;
 
-      case 'Chrome':
-      case 'Firefox':
-      case 'Safari':
-      case 'Opera':
-        alert( 'Okay we support these browsers too' );
-        break;
+          case 1:
+            alert("Вы ввели число 1");
+            break;
 
-      default:
-        
-    }
-  };
+          case 2:
+          case 3:
+            alert("Вы ввели число 2, а может и 3");
+            break;
 
-  const button1 = document.querySelector('#myButton1');
-  button1.addEventListener('click', callback1)
+          default:
+            break;
+        }
 
-  //Название JavaScript #2
-  const callback2 = () => {
-    const number = +prompt('Введите число между 0 и 3', '');
+        if (number === 0) {
+          alert("Вы ввели число 0");
+        }
 
-    switch (number) {
-      case 0:
-        alert('Вы ввели число 0');
-        break;
-    
-      case 1:
-        alert('Вы ввели число 1');
-        break;
-    
-      case 2:
-      case 3:
-        alert('Вы ввели число 2, а может и 3');
-        break;
-    
-      default:
-        break;
-    }
+        if (number === 1) {
+          alert("Вы ввели число 1");
+        }
 
-    if (number === 0) {
-      alert('Вы ввели число 0');
-    }
+        if (number === 2 || number === 3) {
+          alert("Вы ввели число 2, а может и 3");
+        }
+      };
 
-    if (number === 1) {
-      alert('Вы ввели число 1');
-    }
-
-    if (number === 2 || number === 3) {
-      alert('Вы ввели число 2, а может и 3');
-    }
-  };
-
-  const button2 = document.querySelector('#myButton2');
-  button2.addEventListener('click', callback2)
-
-</script>
-</body>
-
+      const button2 = document.querySelector("#myButton2");
+      button2.addEventListener("click", callback2);
+    </script>
+  </body>
 </html>
