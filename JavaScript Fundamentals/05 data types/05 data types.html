@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>5 Типы данных</title>
+  </head>
+  <body>
+    <h1>5 Типы данных</h1>
+
+    <div>
+      <button onclick="document.location='04 variables/04 variables.html'">Предыдущая</button>
+      <button onclick="document.location='06 alert, prompt, confirm'">
+        Следующая
+      </button>
+    </div>
+
+    <h2>Итого</h2>
+    <p>В JavaScript есть 8 основных типов данных.</p>
+
+    <p>Семь из них называют «примитивными» типами данных:</p>
+    <ul>
+      <li>
+        number для любых чисел: целочисленных или чисел с плавающей точкой;
+        целочисленные значения ограничены диапазоном ±(253-1).
+      </li>
+      <li>bigint для целых чисел произвольной длины.</li>
+      <li>
+        string для строк. Строка может содержать ноль или больше символов, нет
+        отдельного символьного типа.
+      </li>
+      <li>boolean для true/false.</li>
+      <li>
+        null для неизвестных значений – отдельный тип, имеющий одно значение
+        null.
+      </li>
+      <li>
+        undefined для неприсвоенных значений – отдельный тип, имеющий одно
+        значение undefined.
+      </li>
+      <li>symbol для уникальных идентификаторов.</li>
+    </ul>
+    <p>И один не является «примитивным» и стоит особняком:</p>
+    <ul>
+      <li>object для более сложных структур данных.</li>
+    </ul>
+    <p>
+      Оператор typeof позволяет нам увидеть, какой тип данных сохранён в
+      переменной.
+    </p>
+    <ul>
+      <li>Имеет две формы: typeof x или typeof(x).</li>
+      <li>Возвращает строку с именем типа. Например, "string".</li>
+      <li>
+        Для null возвращается "object" – это ошибка в языке, на самом деле это
+        не объект.
+      </li>
+    </ul>
+    <p>
+      В следующих главах мы сконцентрируемся на примитивных значениях, а когда
+      познакомимся с ними, перейдём к объектам.
+    </p>
+
+    <h2>Задачи</h2>
+    <h3>Шаблонные строки</h3>
+    <p>важность: 5</p>
+    <p>Что выведет этот скрипт?</p>
+    <button id="myButton1">Задание 1</button>
+  </body>
+  <script src="05.js"></script>
+</html>

@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Функции</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Функции</title>
-</head>
+  <body>
+    <h1>15 Функции</h1>
 
-<body>
-  
-  <h1>15 Функции</h1>
-  
-  <p>
-    <button onclick="document.location='14 the switch statement.html'">Предыдущая</button>
-    <button onclick="document.location='page/new.html'">Следующая</button>
-  </p>
-  
-  <h2>Задачи</h2>
+    <p>
+      <button onclick="document.location='14 the switch statement.html'">
+        Предыдущая
+      </button>
+      <button onclick="document.location='page/new.html'">Следующая</button>
+    </p>
 
-  <!-- #1 -->
-  <div>
-    <h3>Обязателен ли "else"?</h3>
-    <p>важность: 4</p>
-    <p>Следующая функция возвращает true, если параметр age больше 18.</p>
-    <p>В ином случае она запрашивает подтверждение через confirm и возвращает его результат:</p>
+    <h2>Задачи</h2>
+
+    <!-- #1 -->
+    <div>
+      <h3>Обязателен ли "else"?</h3>
+      <p>важность: 4</p>
+      <p>Следующая функция возвращает true, если параметр age больше 18.</p>
+      <p>
+        В ином случае она запрашивает подтверждение через confirm и возвращает
+        его результат:
+      </p>
       <code>
         <pre>
           function checkAge(age) {
@@ -35,7 +38,9 @@
           }
         </pre>
       </code>
+
       <p>Будет ли эта функция работать как-то иначе, если убрать else?</p>
+
       <code>
         <pre>
           function checkAge(age) {
@@ -48,45 +53,51 @@
         </pre>
       </code>
       <p>Есть ли хоть одно отличие в поведении этого варианта?</p>
-    
-    <button id="myButton1">Задание 1</button>
-  </div>
-  
-  <!-- #2 -->
-  <div>       
+
+      <button id="myButton1">Задание 1</button>
+    </div>
+
+    <!-- #2 -->
+    <div>
       <h3>Перепишите функцию, используя оператор '?' или '||'</h3>
-      <p>важность: 4 <br>
-      Следующая функция возвращает true, если параметр age больше 18. <br>    
-      В ином случае она задаёт вопрос confirm и возвращает его результат</p>
-    
+      <p>
+        важность: 4 <br />
+        Следующая функция возвращает true, если параметр age больше 18. <br />
+        В ином случае она задаёт вопрос confirm и возвращает его результат
+      </p>
+
       <code>
         <pre>
-          function checkAge(age) {
-            if (age > 18) {
-              return true;
-            } else {
-              return confirm('Родители разрешили?');
-            }
+        function checkAge(age) {
+          if (age > 18) {
+            return true;
+          } else {
+            return confirm('Родители разрешили?');
           }
-        </pre>
+        }
+      </pre
+        >
       </code>
-      Перепишите функцию, чтобы она делала то же самое, но без if, в одну строку.
-    
-      Сделайте два варианта функции checkAge:
-    
-      Используя оператор ?
-      Используя оператор ||
-    
-    <button id="myButton2">Задание 2</button>
-  </div>
+      <p>
+        Перепишите функцию, чтобы она делала то же самое, но без if, в одну
+        строку. <br />
+        Сделайте два варианта функции checkAge: <br />
+        1. Используя оператор ? <br />
+        2. Используя оператор || <br />
+      </p>
 
-  <!-- #3 -->
-  <div>
-    <p>
-      Функция min(a, b)
-      важность: 1
-      Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
-      Пример вызовов:
+      <button id="myButton2">Задание 2</button>
+    </div>
+
+    <!-- #3 -->
+    <div>
+        <h3>Функция min(a, b)</h3>
+      <p>
+        важность: 1 <br />
+        Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
+        <br />
+        Пример вызовов:
+      </p>
       <code>
         <pre>
           min(2, 5) == 2
@@ -94,17 +105,20 @@
           min(1, 1) == 1
         </pre>
       </code>
-    </p>
-    <button id="myButton3">Задание 3</button>
-  </div>
 
-  <!-- #4 -->
-  <div>
-    <p>
+      <button id="myButton3">Задание 3</button>
+    </div>
+
+    <!-- #4 -->
+    <div>
+      <p></p>
       <h3>Функция pow(x,n)</h3>
-      <p>важность: 4</p>
-      Напишите функцию pow(x,n), которая возводит x в степень n и возвращает результат.
-    
+      <p>
+        важность: 4 <br />
+        Напишите функцию pow(x,n), которая возводит x в степень n и возвращает
+        результат.
+      </p>
+
       <code>
         <pre>
           pow(3, 2) = 3 * 3 = 9
@@ -112,138 +126,141 @@
           pow(1, 100) = 1 * 1 * ...* 1 = 1
         </pre>
       </code>
-      Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
-    
-      Запустить демо
-    
-      P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше.
-    </p>
-    <button id="myButton4">Задание 4</button>
-  </div>
-  
-<script>  
-  //Обязателен ли "else"? #1
-  const callback1 = () => {
-    function checkAge(age) {
-      if (age > 18) {
-        return true;
-      }
-      // ...
-      return confirm('Родители разрешили?');
-    }
-  };
+      <p>
+        Создайте страницу, которая запрашивает x и n, а затем выводит результат
+        pow(x,n). <br />
+        Запустить демо <br />
+        P.S. В этой задаче функция обязана поддерживать только натуральные
+        значения n, т.е. целые от 1 и выше.
+      </p>
 
-  const button1 = document.querySelector('#myButton1');
-  button1.addEventListener('click', callback1);
+      <button id="myButton4">Задание 4</button>
+    </div>
 
+    <script>
+      //Обязателен ли "else"? #1
+      const callback1 = () => {
+        function checkAge(age) {
+          if (age > 18) {
+            return true;
+          }
+          // ...
+          return confirm("Родители разрешили?");
+        }
+      };
 
-  //Перепишите функцию, используя оператор '?' или '||' #2
-  const callback2 = () => {
-    const number = +prompt('Введите число между 0 и 3', '');
+      const button1 = document.querySelector("#myButton1");
+      button1.addEventListener("click", callback1);
 
-    switch (number) {
-      case 0:
-        alert('Вы ввели число 0');
-        break;
-    
-      case 1:
-        alert('Вы ввели число 1');
-        break;
-    
-      case 2:
-      case 3:
-        alert('Вы ввели число 2, а может и 3');
-        break;
-    
-      default:
-        break;
-    }
+      //Перепишите функцию, используя оператор '?' или '||' #2
+      const callback2 = () => {
+        const number = +prompt("Введите число между 0 и 3", "");
 
-    if (number === 0) {
-      alert('Вы ввели число 0');
-    }
+        switch (number) {
+          case 0:
+            alert("Вы ввели число 0");
+            break;
 
-    if (number === 1) {
-      alert('Вы ввели число 1');
-    }
+          case 1:
+            alert("Вы ввели число 1");
+            break;
 
-    if (number === 2 || number === 3) {
-      alert('Вы ввели число 2, а может и 3');
-    }
-  };
+          case 2:
+          case 3:
+            alert("Вы ввели число 2, а может и 3");
+            break;
 
-  const button2 = document.querySelector('#myButton2');
-  button2.addEventListener('click', callback2);
+          default:
+            break;
+        }
 
+        if (number === 0) {
+          alert("Вы ввели число 0");
+        }
 
-  //if (строка с нулём) #3
-  const callback3 = () => {
-    let browser = 'Opera';
+        if (number === 1) {
+          alert("Вы ввели число 1");
+        }
 
-    if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
-      alert( 'Okay we support these browsers too' );
-    } else if (browser === 'Edge'){
-      alert( "You've got the Edge!" );
-    } else {
-      alert( 'We hope that this page looks ok!' );
-    }
+        if (number === 2 || number === 3) {
+          alert("Вы ввели число 2, а может и 3");
+        }
+      };
 
+      const button2 = document.querySelector("#myButton2");
+      button2.addEventListener("click", callback2);
 
-    switch (browser) {
-      case 'Edge':
-        alert( "You've got the Edge!" );
-        break;
+      //if (строка с нулём) #3
+      const callback3 = () => {
+        let browser = "Opera";
 
-      case 'Chrome':
-      case 'Firefox':
-      case 'Safari':
-      case 'Opera':
-        alert( 'Okay we support these browsers too' );
-        break;
+        if (
+          browser === "Chrome" ||
+          browser === "Firefox" ||
+          browser === "Safari" ||
+          browser === "Opera"
+        ) {
+          alert("Okay we support these browsers too");
+        } else if (browser === "Edge") {
+          alert("You've got the Edge!");
+        } else {
+          alert("We hope that this page looks ok!");
+        }
 
-      default:
-        
-    }
-  };
+        switch (browser) {
+          case "Edge":
+            alert("You've got the Edge!");
+            break;
 
-  const button3 = document.querySelector('#myButton3');
-  button3.addEventListener('click', callback3);
+          case "Chrome":
+          case "Firefox":
+          case "Safari":
+          case "Opera":
+            alert("Okay we support these browsers too");
+            break;
 
+          default:
+        }
+      };
 
-  //if (строка с нулём) #4
-  const callback4 = () => {
-    let browser = 'Opera';
+      const button3 = document.querySelector("#myButton3");
+      button3.addEventListener("click", callback3);
 
-    if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
-      alert( 'Okay we support these browsers too' );
-    } else if (browser === 'Edge'){
-      alert( "You've got the Edge!" );
-    } else {
-      alert( 'We hope that this page looks ok!' );
-    }
+      //if (строка с нулём) #4
+      const callback4 = () => {
+        let browser = "Opera";
 
+        if (
+          browser === "Chrome" ||
+          browser === "Firefox" ||
+          browser === "Safari" ||
+          browser === "Opera"
+        ) {
+          alert("Okay we support these browsers too");
+        } else if (browser === "Edge") {
+          alert("You've got the Edge!");
+        } else {
+          alert("We hope that this page looks ok!");
+        }
 
-    switch (browser) {
-      case 'Edge':
-        alert( "You've got the Edge!" );
-        break;
+        switch (browser) {
+          case "Edge":
+            alert("You've got the Edge!");
+            break;
 
-      case 'Chrome':
-      case 'Firefox':
-      case 'Safari':
-      case 'Opera':
-        alert( 'Okay we support these browsers too' );
-        break;
+          case "Chrome":
+          case "Firefox":
+          case "Safari":
+          case "Opera":
+            alert("Okay we support these browsers too");
+            break;
 
-      default:
-        
-    }
-  };
+          default:
+        }
+      };
 
-  const button4 = document.querySelector('#myButton4');
-  button4.addEventListener('click', callback4)
-
-</script>
-</body>
-
+      const button4 = document.querySelector("#myButton4");
+      button4.addEventListener("click", callback4);
+    </script>
+  </body>
 </html>

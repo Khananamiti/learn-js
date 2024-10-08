@@ -1,120 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Циклы while и for</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Циклы while и for</title>
-</head>
+  <body>
+    <h1>13 Циклы while и for</h1>
 
-<body>
-  <!-- #1 -->
-  <h1>13 Циклы while и for</h1>
-  <h2>Задачи</h2>
-  Выведите чётные числа
-важность: 5
-При помощи цикла for выведите чётные числа от 2 до 10.
-  <button id="myButton1">Задание 1</button>
-  
-  <!-- #2 -->
-  Замените for на while
-важность: 5
-Перепишите код, заменив цикл for на while, без изменения поведения цикла.
+    <div>
+      <button onclick="document.location='12 nullish coalescing operator.html'">
+        Предыдущая
+      </button>
+      <button onclick="document.location='14 the switch statement.html'">
+        Следующая
+      </button>
+    </div>
 
-for (let i = 0; i < 3; i++) {
-  alert( `number ${i}!` );
-}
-  <button id="myButton2">Задание 2</button>
+    <h2>Задачи</h2>
+    <!-- #1 -->
+    <div>
+      <h3>Последнее значение цикла</h3>
+      <p>
+        важность: 3 <br />
+        Какое последнее значение выведет этот код? Почему?
+      </p>
 
+      <code>
+        <pre>
+          let i = 3;
+          
+          while (i) {
+            alert( i-- );
+          }
+        </pre>
+      </code>
+      <button id="myButton1">Задание 1</button>
+    </div>
 
-  <!-- #3 -->
-  Повторять цикл, пока ввод неверен
-важность: 5
-Напишите цикл, который предлагает prompt ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
+    <!-- #2 -->
+    <div>
+      <h3>Какие значения выведет цикл while?</h3>
+      <p>
+        важность: 4 <br />
+        Для каждого цикла запишите, какие значения он выведет. Потом сравните с
+        ответом. <br />
+        Оба цикла выводят alert с одинаковыми значениями или нет? <br />
+        Префиксный вариант ++i:
+      </p>
 
-Цикл должен спрашивать число пока либо посетитель не введёт число, большее 100, либо не нажмёт кнопку Отмена (ESC).
+      <code>
+        <pre>
+          let i = 0;
+          while (++i < 5) alert( i );
+        </pre>
+      </code>
+      <p>Постфиксный вариант i++</p>
 
-Предполагается, что посетитель вводит только числа. Предусматривать обработку нечисловых строк в этой задаче необязательно.
-  <button id="myButton3">Задание 3</button>
+      <code>
+        <pre>
+          let i = 0;
+          while (i++ < 5) alert( i );
+        </pre>
+      </code>
+      <button id="myButton2">Задание 2</button>
+    </div>
 
+    <!-- #3 -->
+    <div>
+      <h3>Какие значения выведет цикл for?</h3>
+      <p>
+        важность: 4 <br />
+        Для каждого цикла запишите, какие значения он выведет. Потом сравните с
+        ответом. <br />
+        Оба цикла выведут alert с одинаковыми значениями или нет? <br />
+        Постфиксная форма:
+      </p>
 
-  <!-- #4 -->
-Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1.
+      <code>
+        <pre>          for (let i = 0; i < 5; i++) alert( i );</pre>
+      </code>
+      <p>Префиксная форма:</p>
 
-Другими словами, n > 1 – простое, если при его делении на любое число кроме 1 и n есть остаток.
+      <code>
+        <pre>          for (let i = 0; i < 5; ++i) alert( i );</pre>
+      </code>
+      <button id="myButton3">Задание 3</button>
+    </div>
 
-Например, 5 это простое число, оно не может быть разделено без остатка на 2, 3 и 4.
+    <!-- #4 -->
+    <div>
+      <h3>Выведите чётные числа</h3>
+      <p>
+        важность: 5 <br />
+        При помощи цикла for выведите чётные числа от 2 до 10.
+      </p>
+      <button id="myButton4">Задание 4</button>
+    </div>
 
-Напишите код, который выводит все простые числа из интервала от 2 до n.
+    <!-- #5 -->
+    <div>
+      <h3>Замените for на while</h3>
+      <p>
+        важность: 5 <br />
+        Перепишите код, заменив цикл for на while, без изменения поведения
+        цикла.
+      </p>
+      <code>
+        <pre>
+          for (let i = 0; i < 3; i++) {
+            alert( `number ${i}!` );
+          }
+        </pre>
+      </code>
+      <button id="myButton5">Задание 5</button>
+    </div>
 
-Для n = 10 результат должен быть 2,3,5,7.
+    <!-- #6 -->
+    <div>
+      <h3>Повторять цикл, пока ввод неверен</h3>
+      <p>
+        важность: 5 <br />
+        Напишите цикл, который предлагает prompt ввести число, большее 100. Если
+        посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
+        <br />
+        Цикл должен спрашивать число пока либо посетитель не введёт число,
+        большее 100, либо не нажмёт кнопку Отмена (ESC). <br />
+        Предполагается, что посетитель вводит только числа. Предусматривать
+        обработку нечисловых строк в этой задаче необязательно.
+      </p>
+      <button id="myButton6">Задание 6</button>
+    </div>
 
-P.S. Код также должен легко модифицироваться для любых других интервалов.
-  <button id="myButton4">Задание 4</button>
-  
-  <p>
-    <button onclick="document.location='12 nullish coalescing operator.html'">Предыдущая</button>
-    <button onclick="document.location='14 the switch statement.html'">Следующая</button>
-  </p>  
-  
-<script>  
-  //if (строка с нулём) #1
-  const callback1 = () => {
-    for (let index = 2; index <= 10; index++) {
-      if (index % 2 == 0) alert(index);
-    }
-  };
+    <!-- #7 -->
+    <div>
+      <h3>Вывести простые числа</h3>
+      <p>
+        важность: 3 <br />
+        Натуральное число, большее 1, называется простым, если оно ни на что не
+        делится, кроме себя и 1. <br />
+        Другими словами, n > 1 – простое, если при его делении на любое число
+        кроме 1 и n есть остаток. <br />
+        Например, 5 это простое число, оно не может быть разделено без остатка
+        на 2, 3 и 4. <br />
+        <b>Напишите код, который выводит все простые числа из интервала от</b> 2
+        <b>до</b> n. <br />
+        Для n = 10 результат должен быть 2,3,5,7. <br />
+        P.S. Код также должен легко модифицироваться для любых других
+        интервалов.
+      </p>
+      <button id="myButton7">Задание 7</button>
+    </div>
 
-  const button1 = document.querySelector('#myButton1');
-  button1.addEventListener('click', callback1)
+    <script>
+      // Последнее значение цикла #1
+      const callback1 = () => {
+        alert("Выведет 1");
+      };
 
-  //Название JavaScript #2
-  const callback2 = () => {
-    for (let i = 0; i < 3; i++) {
-      alert( `number ${i}!` );
-    }
+      const button1 = document.querySelector("#myButton1");
+      button1.addEventListener("click", callback1);
 
-    let i = 0;
-    while (i < 3) {
-      alert(`number ${i}!`);
-      i++
-    }
+      //Какие значения выведет цикл while? #2
+      const callback2 = () => {
+        alert("Префиксный: от 1 до 4, постфиксный: от 1 до 5");
+      };
 
-  };
+      const button2 = document.querySelector("#myButton2");
+      button2.addEventListener("click", callback2);
 
-  const button2 = document.querySelector('#myButton2');
-  button2.addEventListener('click', callback2)
+      //Какие значения выведет цикл for? #3
+      const callback3 = () => {
+        alert("Префиксный: от 0 до 4 в обоих случаях.");
+      };
 
-  //Покажите знак числа #3
-  const callback3 = () => {
-    let num;
+      const button3 = document.querySelector("#myButton3");
+      button3.addEventListener("click", callback3);
 
-    do {
-      num = prompt('Введите число больше 100?')
-    } while (num <= 100 && num);
-  };
+      //Выведите чётные числа #4
+      const callback4 = () => {
+        for (let index = 2; index <= 10; index++) {
+          if (index % 2 == 0) alert(index);
+        }
+      };
 
-  const button3 = document.querySelector('#myButton3');
-  button3.addEventListener('click', callback3)
+      const button4 = document.querySelector("#myButton4");
+      button4.addEventListener("click", callback4);
 
-  //Перепишите 'if' в '?' #4
-  const callback4 = () => {
-    let n = 10;
+      //Замените for на while? #5
+      const callback5 = () => {
+        let i = 0;
 
-    nextPrime:
-    for (let i = 2; i <= n; i++) { // Для всех i...
+        while (i < 3) {
+          alert(`number ${i}!`);
+          i++;
+        }
+      };
 
-      for (let j = 2; j < i; j++) { // проверить, делится ли число..
-        if (i % j == 0) continue nextPrime; // не подходит, берём следующее
-      }
+      const button5 = document.querySelector("#myButton5");
+      button5.addEventListener("click", callback5);
 
-      alert( i ); // простое число
-    }
-  };
+      //Повторять цикл, пока ввод неверен #6
+      const callback6 = () => {
+        let num;
 
-  const button4 = document.querySelector('#myButton4');
-  button4.addEventListener('click', callback4)
+        do {
+          num = prompt("Введите число больше 100?");
+        } while (num <= 100 && num);
+      };
 
-</script>
-</body>
+      const button6 = document.querySelector("#myButton6");
+      button6.addEventListener("click", callback6);
 
+      //Вывести простые числа #7
+      const callback7 = () => {
+        let n = 10;
+
+        nextPrime: for (let i = 2; i <= n; i++) {
+          // Для всех i...
+
+          for (let j = 2; j < i; j++) {
+            // проверить, делится ли число..
+            if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+          }
+
+          alert(i); // простое число
+        }
+      };
+
+      const button7 = document.querySelector("#myButton7");
+      button7.addEventListener("click", callback7);
+    </script>
+  </body>
 </html>
