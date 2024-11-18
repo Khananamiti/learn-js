@@ -140,13 +140,18 @@
     <script>
       //Обязателен ли "else"? #1
       const callback1 = () => {
+        let age = prompt('Введите число');
+
         function checkAge(age) {
+          
           if (age > 18) {
             return true;
-          }
+          } 
           // ...
           return confirm("Родители разрешили?");
         }
+
+        checkAge(age);
       };
 
       const button1 = document.querySelector("#myButton1");
