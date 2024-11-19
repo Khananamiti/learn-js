@@ -53,6 +53,7 @@
         </pre>
       </code>
       <p>Есть ли хоть одно отличие в поведении этого варианта?</p>
+      <p>Ответ: Оба варианта функций работают одинаково, отличий нет.</p>
 
       <button id="myButton1">Задание 1</button>
     </div>
@@ -154,46 +155,18 @@
         checkAge(age);
       };
 
-      const button1 = document.querySelector("#myButton1");
-      button1.addEventListener("click", callback1);
-
       //Перепишите функцию, используя оператор '?' или '||' #2
       const callback2 = () => {
-        const number = +prompt("Введите число между 0 и 3", "");
-
-        switch (number) {
-          case 0:
-            alert("Вы ввели число 0");
-            break;
-
-          case 1:
-            alert("Вы ввели число 1");
-            break;
-
-          case 2:
-          case 3:
-            alert("Вы ввели число 2, а может и 3");
-            break;
-
-          default:
-            break;
+        function checkAge(age) {
+          if (age > 18) {
+            return true;
+          } else {
+            return confirm('Родители разрешили?');
+          }
         }
 
-        if (number === 0) {
-          alert("Вы ввели число 0");
-        }
-
-        if (number === 1) {
-          alert("Вы ввели число 1");
-        }
-
-        if (number === 2 || number === 3) {
-          alert("Вы ввели число 2, а может и 3");
-        }
+        
       };
-
-      const button2 = document.querySelector("#myButton2");
-      button2.addEventListener("click", callback2);
 
       //if (строка с нулём) #3
       const callback3 = () => {
@@ -228,9 +201,6 @@
         }
       };
 
-      const button3 = document.querySelector("#myButton3");
-      button3.addEventListener("click", callback3);
-
       //if (строка с нулём) #4
       const callback4 = () => {
         let browser = "Opera";
@@ -264,8 +234,29 @@
         }
       };
 
-      const button4 = document.querySelector("#myButton4");
-      button4.addEventListener("click", callback4);
+      const buttonInfoList = [
+        {
+          "selector": "#myButton1",
+          "callback": callback1
+        },
+        {
+          "selector": "#myButton2",
+          "callback": callback2
+        },
+        {
+          "selector": "#myButton3",
+          "callback": callback3
+        },
+        {
+          "selector": "#myButton4",
+          "callback": callback4
+        },
+      ];
+
+      for (const buttonInfo of buttonInfoList) {
+        const button = document.querySelector(buttonInfo.selector);
+        button.addEventListener("click", buttonInfo.callback);
+      }
     </script>
   </body>
 </html>
